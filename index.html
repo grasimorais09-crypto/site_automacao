@@ -858,13 +858,14 @@ footer {
       <div class="plan-pricing">
         <div class="plan-price-label">Implantação</div>
         <div class="plan-price" style="color:#3b1af3">R$ 500 – R$ 800</div>
-     </div>
+        <div class="plan-maintenance" style="color:#3b1af3">✦ Sem mensalidade</div>
+      </div>
       <div class="plan-features">
         <div class="plan-feature"><span class="check">✓</span> Automações de processos e planilhas</div>
         <div class="plan-feature"><span class="check">✓</span> Controle de estoque e financeiro</div>
         <div class="plan-feature"><span class="check">✓</span> Relatórios automáticos por e-mail</div>
         <div class="plan-feature"><span class="check">✓</span> Entrega em 7 a 15 dias úteis</div>
-        <div class="plan-feature"><span class="check">✓</span> 1 revisão inclusa após entrega</div>
+        <div class="plan-feature"><span class="check">✓</span> Contrato de 5 meses</div>
       </div>
       <button class="plan-btn" style="background:#3b1af3" onclick="openModal('essencial')">Saiba mais</button>
     </div>
@@ -885,9 +886,9 @@ footer {
       <div class="plan-features">
         <div class="plan-feature"><span class="check">✓</span> Bots de WhatsApp + integração via API</div>
         <div class="plan-feature"><span class="check">✓</span> Dashboard de vendas e automação de cobranças</div>
-        <div class="plan-feature"><span class="check">✓</span> Manutenções mensais inclusas</div>
         <div class="plan-feature"><span class="check">✓</span> Entrega em 15 a 30 dias úteis</div>
         <div class="plan-feature"><span class="check">✓</span> Suporte contínuo durante contrato</div>
+        <div class="plan-feature"><span class="check">✓</span> Contrato de 10 meses</div>
       </div>
       <button class="plan-btn" onclick="openModal('profissional')">Saiba mais</button>
     </div>
@@ -907,60 +908,12 @@ footer {
       <div class="plan-features">
         <div class="plan-feature"><span class="check">✓</span> Dashboards BI completos com Star Schema</div>
         <div class="plan-feature"><span class="check">✓</span> Torre de controle, RH e onboarding digital</div>
-        <div class="plan-feature"><span class="check">✓</span> Suporte e manutenções ilimitadas</div>
         <div class="plan-feature"><span class="check">✓</span> Entrega em 30 a 45 dias úteis</div>
         <div class="plan-feature"><span class="check">✓</span> Treinamento completo da equipe</div>
+        <div class="plan-feature"><span class="check">✓</span> Contrato de 12 meses</div>
       </div>
       <button class="plan-btn" style="background:#6B46C1" onclick="openModal('premium')">Saiba mais</button>
     </div>
-  </div>
-
-  <!-- Tabela comparativa -->
-  <div style="margin-top:60px;">
-    <h3 class="reveal" style="font-family:var(--font-head);font-size:1.3rem;font-weight:700;margin-bottom:24px;color:#00C8FF;">Comparativo detalhado</h3>
-    <div class="table-wrapper reveal">
-      <table class="price-table">
-        <thead>
-          <tr>
-            <th>Plano</th>
-            <th>O que inclui</th>
-            <th>Implantação</th>
-            <th>Manutenção Mensal</th>
-            <th>Ideal para</th>
-            <th>Detalhes</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><b style="color:#3b1af3">🟢 Essencial</b></td>
-            <td>Automações de processos, planilhas inteligentes de estoque e financeiro, relatórios automáticos por e-mail</td>
-            <td><b>R$ 500 – R$ 800</b></td>
-            <td><span style="color:#0066FF;font-weight:600;">Sem mensalidade</span></td>
-            <td>Autônomos e pequenas empresas</td>
-            <td><button class="btn-tabela" onclick="openModal('essencial')">Saiba Mais</button></td>
-          </tr>
-          <tr>
-            <td><b style="color:#3b1af3">🔵 Profissional</b></td>
-            <td>Bots de WhatsApp, integração via API, automação de cobranças, dashboard de vendas e suporte contínuo</td>
-            <td><b>R$ 1.200 – R$ 1.800</b></td>
-            <td><b>R$ 500 – R$ 700</b><br><small style="opacity:.7">Manutenções mensais inclusas</small></td>
-            <td>Empresas em crescimento</td>
-            <td><button class="btn-tabela" onclick="openModal('profissional')">Saiba Mais</button></td>
-          </tr>
-          <tr>
-            <td><b style="color:#a855f7">🟣 Premium</b></td>
-            <td>Dashboards BI completos, torre de controle, onboarding digital, RH automatizado e suporte ilimitado</td>
-            <td><b>R$ 2.500 – R$ 3.500</b></td>
-            <td><b>R$ 800 – R$ 1.200</b><br><small style="opacity:.7">Suporte e manutenções ilimitadas</small></td>
-            <td>Empresas com foco em dados</td>
-            <td><button class="btn-tabela" onclick="openModal('premium')">Saiba Mais</button></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <p style="text-align:center;margin-top:16px;color:var(--gray);font-size:0.82rem;font-style:italic;">
-      💡 Os valores são estimativas. A proposta final é personalizada após diagnóstico gratuito.
-    </p>
   </div>
 </section>
 
@@ -1277,9 +1230,9 @@ footer {
   /* ── MODAL ── */
   function openModal(plano) {
     const mapa = {
-      essencial:    { titulo:"Plano Essencial",    itens:["🚀 <b>Implantação: R$ 500 – R$ 800</b>","💳 PIX | Débito | Crédito no cartão","✨ <b>Sem mensalidade mensal</b>","📦 Automações de processos e planilhas","📊 Controle de estoque e financeiro","📧 Relatórios automáticos por e-mail"] },
-      profissional: { titulo:"Plano Profissional", itens:["🚀 <b>Implantação: R$ 1.200 – R$ 1.800</b>","💳 PIX | Débito | Crédito no cartão","🛠 <b>Manutenção: R$ 500 – R$ 700/mês</b>","💬 Bots de WhatsApp + integração via API","🎯 Dashboard de vendas e automação de cobranças","✔ Manutenções mensais inclusas"] },
-      premium:      { titulo:"Plano Premium",      itens:["🚀 <b>Implantação: R$ 2.500 – R$ 3.500</b>","💳 PIX | Débito | Crédito no cartão","🛠 <b>Manutenção: R$ 800 – R$ 1.200/mês</b>","📊 Dashboards BI completos com modelagem de dados","🤖 Torre de controle, RH e onboarding digital","✨ Suporte e manutenções ilimitadas"] }
+      essencial:    { titulo:"Plano Essencial",    itens:["🚀 <b>Implantação: R$ 500 – R$ 800</b>","💳 PIX | Débito | Crédito no cartão","✨ <b>Sem mensalidade mensal</b>","📅 Contrato de 5 meses","📦 Automações de processos e planilhas","📊 Controle de estoque e financeiro","📧 Relatórios automáticos por e-mail"] },
+      profissional: { titulo:"Plano Profissional", itens:["🚀 <b>Implantação: R$ 1.200 – R$ 1.800</b>","💳 PIX | Débito | Crédito no cartão","🛠 <b>Manutenção: R$ 500 – R$ 700/mês (cobrada separadamente)</b>","📅 Contrato de 10 meses","💬 Bots de WhatsApp + integração via API","🎯 Dashboard de vendas e automação de cobranças","✔ Suporte contínuo durante o contrato"] },
+      premium:      { titulo:"Plano Premium",      itens:["🚀 <b>Implantação: R$ 2.500 – R$ 3.500</b>","💳 PIX | Débito | Crédito no cartão","🛠 <b>Manutenção: R$ 800 – R$ 1.200/mês (cobrada separadamente)</b>","📅 Contrato de 12 meses","📊 Dashboards BI completos com modelagem de dados","🤖 Torre de controle, RH e onboarding digital","🎓 Treinamento completo da equipe"] }
     };
     const d = mapa[plano]; if(!d) return;
     document.getElementById('modalTitle').innerText = d.titulo;
