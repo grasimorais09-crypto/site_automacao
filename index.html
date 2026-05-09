@@ -1784,8 +1784,6 @@ function processarOpcao(opcao) {
         { mostrarPortfolio(); }
     else if (op.includes("template") || op.includes("planilha pronta") || op.includes("okr") || op.includes("pdi") || op.includes("roi") || op.includes("calendário") || op.includes("frete"))
         { mostrarTemplates(); }
-    else if (op.includes("certif") || op.includes("certificado"))
-        { iniciarFluxoCertGen(); }
     else if (op === "🌐 ver certgen no site")
         { document.getElementById('chatWindow').classList.remove('open'); document.getElementById('certgen')?.scrollIntoView({behavior:'smooth'}); }
     else if (op === "💬 falar pelo whatsapp agora")
@@ -1799,6 +1797,9 @@ function processarOpcao(opcao) {
     else if (op === "📦 de 201 a 500 certificados") { certgenApresentarPreco(500); }
     else if (op === "📦 acima de 500 certificados") { certgenApresentarPreco(999); }
     else if (op === "✅ quero solicitar agora") { certgenCapturarContato(); }
+    else if (op === "📋 quero saber mais antes") { certgenSaberMais(); }
+    else if (op.includes("certif") || op.includes("certificado"))
+        { iniciarFluxoCertGen(); }
     else if (op === "📋 quero saber mais antes") { certgenSaberMais(); }
     else if (op.includes("estoque") || op.includes("financeiro") || op.includes("planilha"))
         { mostrarSolucaoEstoqueFinanceiro(); }
